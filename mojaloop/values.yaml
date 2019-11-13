@@ -158,10 +158,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger.local
+          api: central-ledger.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -319,10 +319,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-prepare.local
+          api: central-ledger-transfer-prepare.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -480,10 +480,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-admin-transfer.local
+          api: central-ledger-admin-transfer.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -641,10 +641,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-position.local
+          api: central-ledger-transfer-position.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -802,10 +802,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-get.local
+          api: central-ledger-transfer-get.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -963,10 +963,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-fulfil.local
+          api: central-ledger-transfer-fulfil.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -1124,10 +1124,10 @@ central:
           api: /
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-timeout.local
+          api: central-ledger-timeout.iso-demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
-          # kubernetes.io/ingress.class: nginx
+          kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
         tls:
           # Secrets must be manually created in the namespace.
@@ -1931,10 +1931,10 @@ central:
       externalPath: /
       # Used to create an Ingress record.
       hosts:
-        api: central-settlement.local
+        api: central-settlement.iso-demo.openafrica.network
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: '/'
-        # kubernetes.io/ingress.class: nginx
+        kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
       tls:
         # Secrets must be manually created in the namespace.
@@ -2020,12 +2020,12 @@ central:
       enabled: true
       # Used to create an Ingress record.
       hosts:
-        api: central-event-processor.local
+        api: central-event-processor.iso-demo.openafrica.network
 
       externalPath: /
 
       annotations:
-        # kubernetes.io/ingress.class: nginx
+        kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
 
       tls:
@@ -2416,11 +2416,11 @@ ml-api-adapter:
       externalPath: /
       # Used to create an Ingress record.
       hosts:
-        api: ml-api-adapter.local
+        api: ml-api-adapter.iso-demo.openafrica.network
 
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: '/'
-        # kubernetes.io/ingress.class: nginx
+        kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
       tls:
         # Secrets must be manually created in the namespace.
@@ -2506,11 +2506,11 @@ ml-api-adapter:
       externalPath: /
       # Used to create an Ingress record.
       hosts:
-        api: ml-api-adapter-notification.local
+        api: ml-api-adapter-notification.iso-demo.openafrica.network
 
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: '/'
-        # kubernetes.io/ingress.class: nginx
+        kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
       tls:
         # Secrets must be manually created in the namespace.
@@ -2729,12 +2729,12 @@ account-lookup-service:
 
     ingress:
       enabled: true
-      annotations: {}
-        # kubernetes.io/ingress.class: nginx
+      annotations: 
+        kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
       path: /
       hosts:
-        - account-lookup-service.local
+        - account-lookup-service.iso-demo.openafrica.network
       tls: []
       #  - secretName: chart-example-tls
       #    hosts:
@@ -2852,12 +2852,12 @@ account-lookup-service:
 
     ingress:
       enabled: true
-      annotations: {}
-        # kubernetes.io/ingress.class: nginx
+      annotations:
+        kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
       path: /
       hosts:
-        - account-lookup-service-admin.local
+        - account-lookup-service-admin.iso-demo.openafrica.network
       tls: []
       #  - secretName: chart-example-tls
       #    hosts:
@@ -3310,11 +3310,11 @@ quoting-service:
     enabled: true
     externalPath: /
     # Used to create an Ingress record.
-    hosts:
-      api: quoting-service.local
+hosts:
+      api: quoting-service.iso-demo.openafrica.network
     annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: '/'
-      # kubernetes.io/ingress.class: nginx
+      "nginx.ingress.kubernetes.io/rewrite-target": '/'
+      "kubernetes.io/ingress.class": nginx
       # kubernetes.io/tls-acme: "true"
     tls:
       # Secrets must be manually created in the namespace.
@@ -3485,14 +3485,14 @@ simulator:
 
   ingress:
     enabled: true
-    annotations: {
-      "nginx.ingress.kubernetes.io/rewrite-target": "/"
-    }
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: '/'
+      kubernetes.io/ingress.class: nginx
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
     hosts:
-      - moja-simulator.local
+      - moja-simulator.iso-demo.openafrica.network
     tls: []
     #  - secretName: chart-example-tls
     #    hosts:

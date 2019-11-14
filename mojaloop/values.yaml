@@ -3310,7 +3310,7 @@ quoting-service:
     enabled: true
     externalPath: /
     # Used to create an Ingress record.
-hosts:
+    hosts:
       api: quoting-service.iso-demo.openafrica.network
     annotations:
       "nginx.ingress.kubernetes.io/rewrite-target": '/'
